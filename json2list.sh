@@ -12,7 +12,7 @@ cat <<-END
 		</head>
 		<body>
 			<ul>
-				$(jq -r '.[] | "<li><a href=\"\(.url)\">\(.name)</a></li>"' $1)
+				$(jq -r '.[] | "<li><a target=\"_top\" href=\"\(.url)\">\(.name)</a></li>"' $1)
 			</ul>
 		</body>
 	</html>
